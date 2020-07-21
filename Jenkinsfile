@@ -7,8 +7,8 @@ pipeline {
             steps {
                 //withMaven(maven : 'maven_3_6_3') {
                     //sh 'mvn clean compile'
-                def mvnHome = tool name: 'maven3', type: 'maven' 
-                sh "${mvnHome}/bin/mvn package"
+                withMaven(tool name: 'maven_3_6_3', type: 'maven_3_6_3)' 
+                sh "/bin/mvn package"
                 }
             }
         }
