@@ -7,7 +7,7 @@ pipeline {
             steps {
                 //withMaven(maven : 'maven_3_6_3') {
                     //sh 'mvn clean compile'
-                def mvnHome = tool name: 'maven3', type: 'maven' {
+                def mvnHome = tool name: 'maven3', type: 'maven' 
                 sh "${mvnHome}/bin/mvn package"
                 }
             }
@@ -31,4 +31,3 @@ pipeline {
             }
         }
     }
-}
